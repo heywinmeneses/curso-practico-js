@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentajes y descuentos</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #623cea;
+            --white-color: #e9f1f7;
+            --optional-color: #54426b;
+            --secundary-color: #dbd5b2;
+            --letter: 'Quicksand', sans-serif;
+            --lg: 20px;
+            --md: 16px;
+            --sm: 12px;
+        }
+
+        body {
+            font-family: var(--letter);
+        }
+
+        main {
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: var(--lg);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: var(--md);
+            margin-bottom: 20px;
+        }
+
+        .main.container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .tag-input {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            margin-bottom: 12px;
+        }
+
+        .tag-input label {
+            margin-right: 16px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid var(--optional-color);
+            border-radius: 12px;
+            padding: 30px 20px;
+        }
+
+        form button {
+            margin-right: 10px;
+            background: var(--optional-color);
+            border: 0;
+            border-radius: 3px;
+            height: 30px;
+            padding: 0 15px 0 15px;
+            color: var(--white-color);
+            font-family: var(--letter);
+            align-self: center;
+            margin-top: 12px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Porcentajes y descuentos</h1>
+        <p>Este es el segundo taller practico de Javascript</p>
+        <div class="main.container">
+            
+            <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+    
+            <form>
+                <div class="tag-input">
+                    <label for="inputPrice">Escribe el precio de tu producto</label>
+                    <input id="inputPrice" type="number">
+
+                </div>
+                <div class="tag-input">
+                    <label for="inputDiscount">Escribe el descuento de tu producto</label>
+                    <select name="cupones" id="inputDiscount">
+                        <option value="1">Black Friday</option>
+                        <option value="2">Black Week</option>
+                        <option value="3">Birthday</option>
+                        <option value="4">Super Offer</option>
+                    </select>
+                </div>
+                <button type="button" onclick="calcularPrecio()">Calcular el precio con descuento</button>
+            </form>
+    
+            <p id="result"></p>
+        </div>
+    </main>
+
+    <script src="./descuentos.js"></script>
+</body>
+
+</html>
