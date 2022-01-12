@@ -33,15 +33,18 @@ function calcularPerimetroCuadrado() {
     const value = input.value;
 
     const perimetro = perimetroCudrado(value)
-    alert(perimetro);
+    var result = document.getElementById("resultado-figuras");
+    result.innerText = `El perimetro del del cuadrado es de ${perimetro} cm`;
+
 }
 
 function calcularAreaCuadrado() {
     const input = document.getElementById("inputCuadrado");
     const value = input.value;
 
-    const area = areaCuadrado(value)
-    alert(area);
+    var area = areaCuadrado(value)
+    var result = document.getElementById("resultado-figuras");
+    result.innerText = `El area del del cuadrado es de ${area} cm^2`;
 }
 
 //Circulo
@@ -50,7 +53,8 @@ function calcularCircunferencia() {
     var value = input.value;
 
     var circunferenciaCirculo = circunferencia(value)
-    alert(circunferenciaCirculo);
+    var result = document.getElementById("resultado-figuras");
+    result.innerText = `La circunferencia del del circulo es de ${circunferenciaCirculo} cm`;
 }
 
 function calcularAreaCirculo() {
@@ -58,7 +62,8 @@ function calcularAreaCirculo() {
     var value = input.value;
 
     var area = areaCirculo(value)
-    alert(area);
+    var result = document.getElementById("resultado-figuras");
+    result.innerText = `El area del del circulo es de ${area} cm^2`;
 }
 
 //Triangulo
@@ -70,7 +75,8 @@ function calcularPerimetroTriangulo() {
 
     var perimetro = (lado*2) + parseFloat(base);
 
-    alert(perimetro);
+    var result = document.getElementById("resultado-figuras");
+    result.innerText = `El perimetro del del triangulo es de ${perimetro} cm`;
 }
 
 function calcularAreatriangulo() {
@@ -81,10 +87,9 @@ function calcularAreatriangulo() {
 
     var calculo = (lado * lado) - ((base/2) * (base/2));
     var altura = Math.sqrt(calculo)
-    console.log(altura);
-    console.log(base);
     var area = (base * altura) / 2;
-    console.log(area);
+  
 
-    alert(area);
+    var result = document.getElementById("resultado-figuras");
+    result.innerText = `El area del del tiangulo es de ${area} cm^2`;
 }
